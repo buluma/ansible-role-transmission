@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  remote_user: root
+  become: true
+  tasks:
+    - name: transmission-gtk --version
+      ansible.builtin.command: transmission-gtk --version
+      register: result
+      changed_when: result is not succeeded
