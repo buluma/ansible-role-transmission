@@ -1,9 +1,8 @@
 ---
-
-- hosts: all
-  remote_user: root
-  become: true
-  gather_facts: false
+- name: converge
+  hosts: all
+  become: yes
+  gather_facts: yes
 
   roles:
-    - name: buluma.bootstrap
+    - role: buluma.bootstrap
