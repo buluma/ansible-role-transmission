@@ -1,9 +1,8 @@
 ---
 
 galaxy_info:
-  namespace: buluma
   role_name: transmission
-  author: Michael Buluma
+  author: buluma
   description: Ansible Role for Transmission Installation
   company: ShadowNet
   license: Apache-2.0
@@ -15,7 +14,7 @@ galaxy_info:
     - name: EL
       versions:
         - all
-    - name: OpenSUSE
+    - name: opensuse
       versions:
         - all
     - name: Debian
