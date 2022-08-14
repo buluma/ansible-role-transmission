@@ -1,5 +1,0 @@
----
-
-_zypper:
-  - { state: "latest", name: "transmission" }
-  - { state: "latest", name: "transmission-gtk" }

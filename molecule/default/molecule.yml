@@ -24,6 +24,26 @@ platforms:
     tty: true
     environment:
       container: docker
+  - name: "transmission-${image:-docker-ubuntu2204-ansible}-${tag:-latest}${TOX_ENVNAME}"
+    image: "${namespace:-buluma}/${image:-docker-ubuntu2204-ansible}:${tag:-latest}"
+    command: /sbin/init
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: yes
+    pre_build_image: yes
+    tty: true
+    environment:
+      container: docker
+  - name: "transmission-${image:-enterpriselinux}-${tag:-8}${TOX_ENVNAME}"
+    image: "${namespace:-buluma}/${image:-enterpriselinux}:${tag:-8}"
+    command: /sbin/init
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: yes
+    pre_build_image: yes
+    tty: true
+    environment:
+      container: docker
 provisioner:
   name: ansible
   config_options:

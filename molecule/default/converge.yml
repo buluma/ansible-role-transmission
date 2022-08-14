@@ -3,6 +3,11 @@
   hosts: all
   become: yes
   gather_facts: yes
+  serial:
+    - 1
+    - 2
+    - 25%
+    - 50%
 
   roles:
     - role: ansible-role-transmission
