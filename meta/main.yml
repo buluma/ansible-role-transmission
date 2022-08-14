@@ -14,9 +14,6 @@ galaxy_info:
       versions:
         - "7"
         - "8"
-    - name: opensuse
-      versions:
-        - all
     - name: Debian
       versions:
         - all

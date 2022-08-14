@@ -29,8 +29,6 @@ molecule:
         tag: "7"
       - image: "enterpriselinux"
         tag: "8"
-      - image: "docker-opensuse-systemd"
-        tag: "latest"
       - image: "debian-systemd"
         tag: "latest"
       - image: "debian-systemd"
