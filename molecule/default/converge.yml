@@ -1,7 +1,7 @@
 ---
 - name: converge
   hosts: all
-  become: yes
+  become: no
   gather_facts: yes
   serial:
     - 1
