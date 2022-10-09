@@ -1,6 +1,6 @@
 ---
 
-- name: i=Install packages
+- name: Install packages
   ansible.builtin.package:
     name: "{{ install_packages }}"
     state: present
