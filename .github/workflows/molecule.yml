@@ -6,22 +6,12 @@
 name: Ansible Molecule
 
 on:
-  # Schedule updates (once weekly)
-  schedule:
-    - cron: '39 20/18 * * 5,3'
-  workflow_dispatch:
   push:
-    branches:
-      - master
-      - main
-      - testing
-    paths-ignore:
-      - '**/README.md'
-      - '**/CHANGELOG.md'
-
-concurrency:
-  group: ${{ github.ref }}-${{ github.workflow }}
-  cancel-in-progress: true
+    tags_ignore:
+      - '*'
+  pull_request:
+  schedule:
+    - cron: '39 20 20 * *'
 
 jobs:
   lint:
@@ -29,12 +19,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-        with:
-          path: "${{ github.repository }}"
-      - name: molecule
-        uses: buluma/molecule-action@v5.0.1
-        with:
-          command: lint
+      - name: ansible-lint
+        uses: ansible-community/ansible-lint-action@main
   test:
     needs:
       - lint
@@ -43,26 +29,26 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - image: "docker-ubuntu-systemd"
+          - image: "ubuntu"
             tag: "latest"
-          - image: "docker-ubuntu-systemd"
+          - image: "ubuntu"
             tag: "focal"
-          - image: "docker-ubuntu-systemd"
+          - image: "ubuntu"
             tag: "bionic"
           - image: "enterpriselinux"
             tag: "7"
           - image: "enterpriselinux"
             tag: "8"
-          - image: "debian-systemd"
+          - image: "debian"
             tag: "latest"
-          - image: "debian-systemd"
-            tag: "buster"
-          - image: "fedora-systemd"
-            tag: "35"
-          - image: "fedora-systemd"
-            tag: "34"
-          - image: "fedora-systemd"
+          - image: "debian"
+            tag: "bookworm"
+          - image: "fedora"
+            tag: "36"
+          - image: "fedora"
             tag: "latest"
+          - image: "fedora"
+            tag: "rawhide"
     steps:
       - name: checkout
         uses: actions/checkout@v3
@@ -73,7 +59,7 @@ jobs:
       - name: parse apparmor for mysql
         run: sudo apparmor_parser -R /etc/apparmor.d/usr.sbin.mysqld
       - name: molecule
-        uses: buluma/molecule-action@v5.0.1
+        uses: buluma/molecule-action@v5.0.4
         with:
           image: ${{ matrix.config.image }}
           tag: ${{ matrix.config.tag }}
