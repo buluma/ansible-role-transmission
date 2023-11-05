@@ -2,9 +2,9 @@
 
 Ansible Role for Transmission Installation
 
-|GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
-|------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-transmission/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-transmission/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-transmission/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-transmission)|[![quality](https://img.shields.io/ansible/quality/59015)](https://galaxy.ansible.com/buluma/transmission)|[![downloads](https://img.shields.io/ansible/role/d/59015)](https://galaxy.ansible.com/buluma/transmission)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-transmission.svg)](https://github.com/buluma/ansible-role-transmission/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-transmission.svg)](https://github.com/buluma/ansible-role-transmission/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-transmission.svg)](https://github.com/buluma/ansible-role-transmission/pulls/)|
+|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
+|------|------|-------|-------|------|-------------|
+|[![github](https://github.com/buluma/ansible-role-transmission/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-transmission/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-transmission/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-transmission)|[![downloads](https://img.shields.io/ansible/role/d/4862)](https://galaxy.ansible.com/buluma/transmission)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-transmission.svg)](https://github.com/buluma/ansible-role-transmission/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-transmission.svg)](https://github.com/buluma/ansible-role-transmission/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-transmission.svg)](https://github.com/buluma/ansible-role-transmission/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
