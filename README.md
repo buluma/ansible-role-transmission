@@ -1,10 +1,10 @@
-# [Ansible role transmission](#transmission)
+# Ansible role [transmission](https://galaxy.ansible.com/ui/standalone/roles/buluma/transmission/documentation)
 
 Ansible Role for Transmission Installation
 
-|GitHub|Version|Issues|Pull Requests|
-|------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-transmission/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-transmission/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-transmission.svg)](https://github.com/buluma/ansible-role-transmission/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-transmission.svg)](https://github.com/buluma/ansible-role-transmission/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-transmission.svg)](https://github.com/buluma/ansible-role-transmission/pulls/)|
+|GitHub|Version|Issues|Pull Requests|Downloads|
+|------|-------|------|-------------|---------|
+|[![github](https://github.com/buluma/ansible-role-transmission/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-transmission/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-transmission.svg)](https://github.com/buluma/ansible-role-transmission/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-transmission.svg)](https://github.com/buluma/ansible-role-transmission/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-transmission.svg)](https://github.com/buluma/ansible-role-transmission/pulls/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/transmission)](https://galaxy.ansible.com/ui/standalone/roles/buluma/transmission/documentation)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -90,13 +90,11 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 ## [License](#license)
 
-[Apache-2.0](https://github.com/buluma/ansible-role-transmission/blob/master/LICENSE).
+[Apache-2.0](https://github.com/buluma/ansible-role-transmission/blob/master/LICENSE)
 
 ## [Author Information](#author-information)
 
-[buluma](https://buluma.github.io/)
+[Shadow Walker](https://buluma.github.io/)
 
-
-### [Special Thanks](#special-thanks)
 
 Template inspired by [Robert de Bock](https://github.com/robertdebock)
