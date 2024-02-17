@@ -33,12 +33,11 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
 - name: Prepare
   hosts: all
   become: no
-  gather_facts: yes
+  gather_facts: no
 
   roles:
     - role: buluma.bootstrap
     - role: buluma.epel
-      when: ansible_os_family == "RedHat"
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.

@@ -22,7 +22,7 @@ on:
   pull_request_target:
   schedule:
     # - cron: '39 20 20 * *'
-    - cron: '39 20 * * 5'
+    - cron: '39 20 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -61,13 +61,19 @@ jobs:
             tag: "latest"
           - image: "debian-systemd"
             tag: "bullseye"
+          - image: "fedora-systemd"
+            tag: "38"
+          - image: "fedora-systemd"
+            tag: "latest"
+          - image: "fedora-systemd"
+            tag: "rawhide"
     steps:
       - name: Checkout Role
         uses: actions/checkout@v4
         with:
           path: "${{ github.repository }}"
       - name: Running Molecule Test
-        uses: buluma/molecule-action@v6.0.3
+        uses: buluma/molecule-action@v24.2.0
         with:
           image: ${{ matrix.config.image }}
           tag: ${{ matrix.config.tag }}
