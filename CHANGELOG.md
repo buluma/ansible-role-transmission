@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-transmission/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-transmission/compare/24.2.26...HEAD)
+
+**Merged pull requests:**
+
+- Bump release-drafter/release-drafter from 5 to 6 [\#15](https://github.com/buluma/ansible-role-transmission/pull/15) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [24.2.26](https://github.com/buluma/ansible-role-transmission/tree/24.2.26) (2024-02-26)
 
 [Full Changelog](https://github.com/buluma/ansible-role-transmission/compare/0.2.0...24.2.26)
