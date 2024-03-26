@@ -14,8 +14,8 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 ---
 - name: Converge
   hosts: all
-  become: no
-  gather_facts: yes
+  become: false
+  gather_facts: true
   serial:
     - 1
     - 2
@@ -32,8 +32,8 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
 ---
 - name: Prepare
   hosts: all
-  become: no
-  gather_facts: no
+  become: false
+  gather_facts: false
 
   roles:
     - role: buluma.bootstrap
