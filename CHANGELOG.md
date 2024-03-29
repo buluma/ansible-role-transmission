@@ -4,6 +4,10 @@
 
 [Full Changelog](https://github.com/buluma/ansible-role-transmission/compare/24.2.26...HEAD)
 
+**Closed issues:**
+
+- Recheck Fedora [\#14](https://github.com/buluma/ansible-role-transmission/issues/14)
+
 **Merged pull requests:**
 
 - Bump dependabot/fetch-metadata from 1 to 2 [\#17](https://github.com/buluma/ansible-role-transmission/pull/17) ([dependabot[bot]](https://github.com/apps/dependabot))
