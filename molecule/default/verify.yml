@@ -5,8 +5,13 @@
   become: true
   gather_facts: true
   tasks:
-    - name: transmission-gtk --version
-      ansible.builtin.command: transmission-gtk --version
+    - name: Verify transmission-gtk exists
+      ansible.builtin.command: transmission-gtk --help
       register: result
-      when: ansible_os_family == 'Debian'
       changed_when: result is not succeeded
+      # when: ansible_os_family is not 'Debian'
+
+    - name: Debug result
+      ansible.builtin.debug:
+        var: result.stdout_lines
+        verbosity: 2
