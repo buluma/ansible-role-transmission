@@ -1,5 +1,4 @@
 ---
-
 - name: Install packages
   ansible.builtin.package:
     name: "{{ install_packages }}"
@@ -10,7 +9,7 @@
 - name: Zypper install
   vars:
     ansible_python_interpreter: "python3"
-  ansible.builtin.zypper:
+  community.general.zypper:
     name: "{{ install_packages }}"
     state: present
   register: result
