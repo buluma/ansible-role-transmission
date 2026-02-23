@@ -12,38 +12,38 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
 ```yaml
 ---
-- name: Converge
-  hosts: all
-  become: false
-  gather_facts: true
-  serial:
-    - 1
-    - 2
-    - 25%
-    - 50%
+  - name: Converge
+    hosts: all
+    become: false
+    gather_facts: true
+    serial:
+      - 1
+      - 2
+      - 25%
+      - 50%
 
-  pre_tasks:
-    - name: Update apt cache.
-      apt: update_cache=yes cache_valid_time=600
-      when: ansible_os_family == 'Debian'
-      changed_when: false
+    pre_tasks:
+      - name: Update apt cache.
+        apt: update_cache=yes cache_valid_time=600
+        when: ansible_os_family == 'Debian'
+        changed_when: false
 
-  roles:
-    - role: buluma.transmission
+    roles:
+      - role: buluma.transmission
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-transmission/blob/master/molecule/default/prepare.yml):
 
 ```yaml
 ---
-- name: Prepare
-  hosts: all
-  become: false
-  gather_facts: false
+  - name: Prepare
+    hosts: all
+    become: false
+    gather_facts: false
 
-  roles:
-    - role: buluma.bootstrap
-    - role: buluma.epel
+    roles:
+      - role: buluma.bootstrap
+      - role: buluma.epel
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.

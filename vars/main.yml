@@ -1,5 +1,4 @@
 ---
-
 _install_packages:
   default:
     - transmission
