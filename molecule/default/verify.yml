@@ -1,17 +1,17 @@
 ---
-  - name: Verify
-    hosts: all
-    remote_user: root
-    become: true
-    gather_facts: true
-    tasks:
-      - name: Verify transmission-gtk exists
-        ansible.builtin.command: transmission-gtk --help
-        register: result
-        changed_when: result is not succeeded
+- name: Verify
+  hosts: all
+  remote_user: root
+  become: true
+  gather_facts: true
+  tasks:
+  - name: Verify transmission-gtk exists
+    ansible.builtin.command: transmission-gtk --help
+    register: result
+    changed_when: result is not succeeded
       # when: ansible_os_family is not 'Debian'
 
-      - name: Debug result
-        ansible.builtin.debug:
-          var: result.stdout_lines
-          verbosity: 2
+  - name: Debug result
+    ansible.builtin.debug:
+      var: result.stdout_lines
+      verbosity: 2
