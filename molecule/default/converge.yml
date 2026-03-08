@@ -4,16 +4,16 @@
   become: false
   gather_facts: true
   serial:
-  - 1
-  - 2
-  - 25%
-  - 50%
+    - 1
+    - 2
+    - 25%
+    - 50%
 
   pre_tasks:
-  - name: Update apt cache.
-    apt: update_cache=yes cache_valid_time=600
-    when: ansible_os_family == 'Debian'
-    changed_when: false
+    - name: Update apt cache.
+      apt: update_cache=yes cache_valid_time=600
+      when: ansible_os_family == 'Debian'
+      changed_when: false
 
   roles:
-  - role: buluma.transmission
+    - role: buluma.transmission
