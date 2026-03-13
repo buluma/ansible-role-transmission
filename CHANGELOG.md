@@ -11,6 +11,7 @@
 
 **Merged pull requests:**
 
+- Bump docker/setup-buildx-action from 3 to 4 [\#21](https://github.com/buluma/ansible-role-transmission/pull/21) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump ansible/ansible-lint from 24.9.0 to 24.9.2 [\#19](https://github.com/buluma/ansible-role-transmission/pull/19) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump ansible/ansible-lint from 24.7.0 to 24.9.0 [\#18](https://github.com/buluma/ansible-role-transmission/pull/18) ([dependabot[bot]](https://github.com/apps/dependabot))
 
