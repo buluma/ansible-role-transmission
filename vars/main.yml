@@ -13,4 +13,4 @@ _install_packages:
     - transmission-cli
     - transmission-gtk
 
-install_packages: "{{ _install_packages[ansible_os_family] | default(_install_packages['default']) }}"
+install_packages: "{{ _install_packages[ansible_facts.os_family] | default(_install_packages['default']) }}"
