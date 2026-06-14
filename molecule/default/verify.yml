@@ -10,7 +10,7 @@
       register: result
       changed_when:
         result is not succeeded
-        # when: ansible_facts.os_family is not 'Debian'
+        # when: ansible_facts['os_family'] is not 'Debian'
 
     - name: Debug result
       ansible.builtin.debug:
