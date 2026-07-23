@@ -4,7 +4,9 @@
 platforms:
   - name: EL
     versions:
-      - "10"
+      # Excludes 10: transmission/transmission-cli/transmission-gtk
+      # aren't built for EPEL10 yet ("No package available" even with
+      # EPEL enabled).
       - "9"
   - name: Debian
     versions:
